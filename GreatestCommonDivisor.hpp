@@ -13,7 +13,7 @@ public:
     /// @param n1 
     /// @param n2 
     /// @return GCD of n1 and n2
-    int gcd(int n1, int n2);
+    unsigned int gcd(unsigned int n1, unsigned int n2);
 
 private:
     /// @brief Swaps two values

@@ -12,11 +12,7 @@
 /// @param n1 
 /// @param n2 
 /// @return GCD of n1 and n2
-int GreatestCommonDivisor::gcd(int n1, int n2) {
-    // Case: n < 0
-    n1 = abs(n1);
-    n2 = abs(n2);
-
+unsigned int GreatestCommonDivisor::gcd(unsigned int n1, unsigned int n2) {
     // Case: n = 0
     if (n1 == 0) return n2;
     if (n2 == 0) return n1;
