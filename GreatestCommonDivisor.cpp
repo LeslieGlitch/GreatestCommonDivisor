@@ -17,8 +17,11 @@ unsigned int GreatestCommonDivisor::gcd(unsigned int n1, unsigned int n2) {
     if (n1 == 0) return n2;
     if (n2 == 0) return n1;
 
+    // Case: n1 = n2
+    if (n1 == n2) return n1;
+
     // Case: Both divisible by 2
-    if ((n1 & 1) == 0 && (n2 & 1))
+    if ((n1 & 1) == 0 && (n2 & 1) == 0)
         return gcd(n1 >> 1, n2 >> 1) << 1;
 
     // Case: n1 even, n2 odd
@@ -29,8 +32,8 @@ unsigned int GreatestCommonDivisor::gcd(unsigned int n1, unsigned int n2) {
     if ((n2 & 1) == 0)
         return gcd(n1, n2 >> 1);
 
-    // Case: n1 >= n2
-    if (n1 >= n2)
+    // Case: n1 > n2
+    if (n1 > n2)
         return gcd((n1 - n2) >> 1, n2);
     
     // Case: n1 < n2
